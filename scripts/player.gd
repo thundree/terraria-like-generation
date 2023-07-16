@@ -19,12 +19,12 @@ func _physics_process(delta):
 func get_input() -> float:
 	var horizontal := 0.0
 	
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") or  Input.is_action_pressed("left"):
 		#animations.play("walk")
 		sprite.flip_h = true
 		horizontal -= 1.0
 	
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") or  Input.is_action_pressed("right"):
 		#animations.play("walk")
 		sprite.flip_h = false
 		horizontal += 1.0
